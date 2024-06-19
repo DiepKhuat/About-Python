@@ -1,0 +1,56 @@
+# Game Rock Paper Scissor
+#Hint if a==1 print ("a bằng 1")
+#     else: 
+#     Print ("a khác 1")
+#age = 12
+#if age < 10 :
+#	print ("con nit")
+#elif age < 18:
+#	print ("tre trau")
+#	if age >= 15 age <=17:
+#		print ("sieu tre traub ")
+#else:
+#	print ("ngươi lon") 
+from random import randint
+
+print("input Paper,Rock,Scissor:")
+player = input()
+computer = randint(0,2)
+
+if computer == 0:
+	computer = "Rock"
+if computer == 1:
+	computer ="Paper"
+if computer==2:
+	computer="Scissor"
+
+print("-----")
+print("You choose:" + player)
+print("computer chooses:" + computer)
+print("-----")
+
+if player==computer:
+	print("Draw")
+else:
+	if player == "Paper":
+		if computer =="Scissor":
+			print ("Lose")
+		else:
+			print("Win")
+		
+	elif player == "Scissor":
+		if computer=="Rock":
+			print("Lose")
+		else:
+			print("Win")
+
+	elif player == "Rock":
+		if computer =="Scissor":
+			print ("Win")
+		else:
+			print("Lose")
+	else:
+		print("input wrong!")
+		
+
+
