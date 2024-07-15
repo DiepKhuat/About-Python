@@ -20,12 +20,19 @@ Keyword Argument:print_name(a =1, b=2, c=hello)
 # if u mark a parameter with 1 asterisk(*), 
 # u can pass any # of positional arguments to your function(typically called *args)
 
-def varibaleLengthArgExample(a,b,*args):
+def varibaleLengthArgExample(a,b,*args, **kwargs): 
     print(a,b)
-    for arg in args:
+    for arg in args: # *args dc coi list, so use loop for to list items
         print(arg)
+    for key,value in kwargs.items():
+        print(key,value)
 def main():
-    varibaleLengthArgExample('a','b','Hello World', 1,2,3)
+    varibaleLengthArgExample('a','b','Hello World', 1, size ='up 4', age=36)
+
+# **Kwargs là dict nên dùng for loop vs key-val 
+# khi dùng thì chỉ cần kwargs ko cần ** 
+
+#compulsory là 2 gtri a,b buộc phải cung cấp. còn *args và **kwargs thì ko có cx dc
 
 if __name__ == "__main__":
     main()
